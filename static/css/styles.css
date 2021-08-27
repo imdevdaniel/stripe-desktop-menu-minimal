@@ -39,10 +39,17 @@ nav ul {
     border: 1px dotted blue;
     border-radius: 12px;
     left: 50%;
-    padding: 2.5rem 2rem;
+    overflow: hidden;
     position: absolute;
     top: 100%;
     transform: translateX(-50%);
+    transform-origin: 50% -50px;
+    transition: 0.25s ease transform;
+    will-change: transform;
+}
+
+.desktop-menu:active {
+    transform: translateX(-50%) rotateX(-15deg);
 }
 
 .desktop-menu__column {
@@ -61,9 +68,47 @@ nav ul {
     white-space: nowrap;
 }
 
+.desktop-menu__column-title--compact {
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+}
+
 .desktop-menu__section {
-    display: flex;
+    left: 0;
+    opacity: 0;
+    padding: 2.5rem 2rem;
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    transition: 0.25s ease opacity, 0.25s ease transform;
+    will-change: opacity, transform;
+}
+
+.desktop-menu__section--visible {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.desktop-menu__section-content {
     align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+}
+
+.desktop-menu__section-footer {
+    background-color: hsl(0, 0%, 96%);
+    align-items: flex-start;
+    display: flex;
+    padding: 2.5rem 2rem;
+    position: relative;
+    margin-left: -2rem;
+    margin-top: 2rem;
+    width: calc(100% + 4rem);
+    z-index: 1;
+}
+
+.desktop-menu__section-footer .menu-link p {
+    background-color: hsl(0, 0%, 96%);
 }
 
 .desktop-nav {
@@ -90,10 +135,11 @@ nav ul {
     margin: 1.5rem auto;
     max-width: 1050px;
     position: relative;
+    perspective: 2000px;
 }
 
 .menu-link {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     margin-bottom: 2rem;
     white-space: nowrap;
@@ -103,8 +149,31 @@ nav ul {
     margin-bottom: 0;
 }
 
-.menu-link--big {
-    align-items: flex-start;
+.menu-link:hover .hidden-arrow {
+    opacity: 1;
+    transform: translate(75%, -50%);
+}
+
+.menu-link:hover small {
+    color: var(--gray-dark);
+}
+
+.menu-link:hover > span {
+    color: var(--gray);
+}
+
+.menu-link:hover p {
+    color: black;
+}
+
+.menu-link--compact {
+    margin-bottom: 1rem;
+}
+
+.menu-link > span {
+    color: var(--gray-light);
+    margin-right: 0.5rem;
+    transition: 0.25s ease color;
 }
 
 .menu-link img {
@@ -114,14 +183,51 @@ nav ul {
 }
 
 .menu-link p {
+    background-color: white;
     color: var(--gray-dark);
     font-size: var(--text-overline);
     font-weight: var(--font-medium);
     line-height: 1;
-    margin: 0.25rem 0;
+    margin: 0;
+    padding: 0.25rem 0.5rem 0.25rem 0;
+    position: relative;
+    transition: 0.25s ease color;
+    width: fit-content;
 }
 
 .menu-link small {
     color: var(--gray);
     font-size: var(--text-small);
+    font-weight: var(--font-medium);
+    transition: 0.25s ease color;
+}
+
+.menu-link.top-link {
+    margin-bottom: 2rem;
+}
+
+.hidden-arrow {
+    display: inline-block;
+    font-size: var(--text-body);
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.15s ease transform, 0.35s ease opacity;
+    will-change: transform, opacity;
+    z-index: -1;
+}
+
+.simple-link {
+    color: var(--gray);
+    display: block;
+    font-size: var(--text-overline);
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    transition: 0.25s ease color;
+}
+
+.simple-link:hover {
+    color: var(--gray-dark);
 }
