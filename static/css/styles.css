@@ -26,6 +26,7 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
+    position: relative;
 }
 
 nav ul {
@@ -34,22 +35,33 @@ nav ul {
     padding: 0;
 }
 
-
 .desktop-menu {
-    border: 1px dotted blue;
+    background-color: white;
     border-radius: 12px;
+    box-shadow: 0 45px 25px -40px hsla(0, 0%, 0%, 0.25), 0 15px 25px 10px hsla(0, 0%, 0%, 0.1);
     left: 50%;
+    opacity: 0;
     overflow: hidden;
     position: absolute;
     top: 100%;
     transform: translateX(-50%);
     transform-origin: 50% -50px;
-    transition: 0.25s ease transform;
-    will-change: transform;
+    transition: 0.25s ease transform, 0.25s ease opacity;
+    will-change: opacity, transform;
 }
 
-.desktop-menu:active {
+.desktop-menu--anim-resize {
+    transition: 0.25s ease transform, 0.25s ease opacity, 0.15s ease width;
+    will-change: opacity, transform, width;
+}
+
+.desktop-menu--rotate {
     transform: translateX(-50%) rotateX(-15deg);
+}
+
+.desktop-menu--visible {
+    opacity: 1;
+    transform: translateX(-50%) rotateX(0deg);
 }
 
 .desktop-menu__column {
@@ -76,17 +88,25 @@ nav ul {
 .desktop-menu__section {
     left: 0;
     opacity: 0;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 2rem 0;
     position: absolute;
     top: 0;
-    transform: translateX(-100%);
-    transition: 0.25s ease opacity, 0.25s ease transform;
+    transform: translateX(-20px);
+    transition: none;
     will-change: opacity, transform;
+    z-index: 1;
 }
 
 .desktop-menu__section--visible {
     opacity: 1;
     transform: translateX(0px);
+    transition: 0s ease opacity, 0s ease transform;
+    z-index: 10;
+}
+
+.desktop-menu__section.section-cases,
+.desktop-menu__section.section-prods {
+    padding-bottom: 2rem;
 }
 
 .desktop-menu__section-content {
@@ -101,9 +121,7 @@ nav ul {
     display: flex;
     padding: 2.5rem 2rem;
     position: relative;
-    margin-left: -2rem;
-    margin-top: 2rem;
-    width: calc(100% + 4rem);
+    margin: 2rem -2rem 0 -2rem;
     z-index: 1;
 }
 
@@ -118,6 +136,7 @@ nav ul {
 }
 
 .desktop-nav__logo {
+    color: white;
     font-size: 1.25rem;
     font-weight: 700;
 }
@@ -126,16 +145,59 @@ nav ul {
     -webkit-appearance: none;
     background-color: transparent;
     border: none;
+    color: white;
     margin: 0 0.25rem;
-    padding: 0.25rem 0.75rem;
+    padding: 1rem;
+}
+
+.desktop-nav__signin {
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, 0.25);
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    font-size: var(--text-overline);
+    font-weight: var(--font-medium);
+    padding: 0.5rem 1rem;
+}
+
+.desktop-nav__signin span {
+    font-size: var(--text-body);
+    font-weight: var(--font-bold);
+    margin: 0 -0.5rem 0 0.5rem;
 }
 
 .header {
-    border: 1px dotted red;
     margin: 1.5rem auto;
     max-width: 1050px;
     position: relative;
     perspective: 2000px;
+    z-index: 10;
+}
+
+.hero-bg {
+    background-image: url('../img/stripebg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.hidden-arrow {
+    display: inline-block;
+    font-size: var(--text-body);
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.15s ease transform, 0.35s ease opacity;
+    will-change: transform, opacity;
+    z-index: -1;
 }
 
 .menu-link {
@@ -206,19 +268,6 @@ nav ul {
     margin-bottom: 2rem;
 }
 
-.hidden-arrow {
-    display: inline-block;
-    font-size: var(--text-body);
-    opacity: 0;
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: 0.15s ease transform, 0.35s ease opacity;
-    will-change: transform, opacity;
-    z-index: -1;
-}
-
 .simple-link {
     color: var(--gray);
     display: block;
@@ -226,6 +275,7 @@ nav ul {
     margin-bottom: 1rem;
     margin-left: 2rem;
     transition: 0.25s ease color;
+    white-space: nowrap;
 }
 
 .simple-link:hover {
