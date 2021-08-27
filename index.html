@@ -23,6 +23,7 @@
                 <button data-menu-opt="devs">Developers</button>
                 <button data-menu-opt="company">Company</button>
                 <button>Pricing</button>
+                <div class="menu-pointer"></div>
             </div>
             <a class="desktop-nav__signin" href="#">
                 Dashboard
@@ -31,449 +32,451 @@
         </div>
         <div class="desktop-menu">
 
-            <div class="menu-pointer"></div>
+            <div class="desktop-menu__wrapper">
 
-            <div class="desktop-menu__section section-prods" data-section="prods">
+                <section class="desktop-menu__section section-prods" data-section="prods">
 
-                <div class="desktop-menu__section-content">
+                    <div class="desktop-menu__section-content">
 
-                    <div class="desktop-menu__column">
-                        <h6 class="desktop-menu__column-title">
-                            Payments
-                        </h6>
-                        <div class="desktop-menu__column-content">
-                            <a class="menu-link menu-link--big" href="#">
-                                <img src="./static/img/icons/icons8-money-pound-48.png" alt="Pound money bag icon">
+                        <div class="desktop-menu__column">
+                            <h6 class="desktop-menu__column-title">
+                                Payments
+                            </h6>
+                            <div class="desktop-menu__column-content">
+                                <a class="menu-link menu-link--big" href="#">
+                                    <img src="./static/img/icons/icons8-money-pound-48.png" alt="Pound money bag icon">
+                                    <div>
+                                        <p>
+                                            Payments
+                                            <span class="material-icons hidden-arrow">east</span>
+                                        </p>
+                                        <small>Online payments</small>
+                                    </div>
+                                </a>
+                                <a class="menu-link menu-link--big" href="#">
+                                    <img src="./static/img/icons/icons8-card-security-48.png" alt="Card security icon">
+                                    <div>
+                                        <p>
+                                            Payment links
+                                            <span class="material-icons hidden-arrow">east</span>
+                                        </p>
+                                        <small>No-code payments</small>
+                                    </div>
+                                </a>
+                                <a class="menu-link menu-link--big" href="#">
+                                    <img src="./static/img/icons/icons8-purchase-order-48.png" alt="Receipt icon">
+                                    <div>
+                                        <p>
+                                            Invoicing
+                                            <span class="material-icons hidden-arrow">east</span>
+                                        </p>
+                                        <small>Online invoices</small>
+                                    </div>
+                                </a>
+                                <a class="menu-link menu-link--big" href="#">
+                                    <img src="./static/img/icons/icons8-handshake-48.png" alt="Handshake icon">
+                                    <div>
+                                        <p>
+                                            Billing
+                                            <span class="material-icons hidden-arrow">east</span>
+                                        </p>
+                                        <small>Subscription management</small>
+                                    </div>
+                                </a>
+                                <a class="menu-link menu-link--big" href="#">
+                                    <img src="./static/img/icons/icons8-wallet-48.png" alt="Wallet icon">
+                                    <div>
+                                        <p>
+                                            Connect
+                                            <span class="material-icons hidden-arrow">east</span>
+                                        </p>
+                                        <small>Payments for platforms</small>
+                                    </div>
+                                </a>
+                                <a class="menu-link menu-link--big" href="#">
+                                    <img src="./static/img/icons/icons8-cash-register-48.png" alt="Cash register icon">
+                                    <div>
+                                        <p>
+                                            Terminal
+                                            <span class="material-icons hidden-arrow">east</span>
+                                        </p>
+                                        <small>In-person payments</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="desktop-menu__column">
+                            <h6 class="desktop-menu__column-title">
+                                Financial services
+                            </h6>
+                            <div class="desktop-menu__column-content">
+                                <a class="menu-link menu-link--big" href="#">
+                                    <img src="./static/img/icons/icons8-debit-card-48.png" alt="Debit card icon">
+                                    <div>
+                                        <p>
+                                            Corporate card
+                                            <span class="material-icons hidden-arrow">east</span>
+                                        </p>
+                                        <small>Spend management</small>
+                                    </div>
+                                </a>
+                                <a class="menu-link menu-link--big" href="#">
+                                    <img src="./static/img/icons/icons8-money-box-48.png" alt="Piggy bank icon">
+                                    <div>
+                                        <p>
+                                            Capital
+                                            <span class="material-icons hidden-arrow">east</span>
+                                        </p>
+                                        <small>Business financing</small>
+                                    </div>
+                                </a>
+                                <a class="menu-link menu-link--big" href="#">
+                                    <img src="./static/img/icons/icons8-insert-credit-card-48.png" alt="Inserting credit card icon">
+                                    <div>
+                                        <p>
+                                            Issuing
+                                            <span class="material-icons hidden-arrow">east</span>
+                                        </p>
+                                        <small>Card creation</small>
+                                    </div>
+                                </a>
+                                <a class="menu-link menu-link--big" href="#">
+                                    <img src="./static/img/icons/icons8-online-money-transfer-48.png" alt="Online transfer icon">
+                                    <div>
+                                        <p>
+                                            Treasury
+                                            <span class="material-icons hidden-arrow">east</span>
+                                        </p>
+                                        <small>Banking-as-a-service</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="desktop-menu__column">
+                            <h6 class="desktop-menu__column-title">
+                                Business operations
+                            </h6>
+                            <div class="desktop-menu__column-content">
+                                <a class="menu-link menu-link--big" href="#">
+                                    <img src="./static/img/icons/icons8-radar-48.png" alt="Radar icon">
+                                    <div>
+                                        <p>
+                                            Radar
+                                            <span class="material-icons hidden-arrow">east</span>
+                                        </p>
+                                        <small>Fraud & risk management</small>
+                                    </div>
+                                </a>
+                                <a class="menu-link menu-link--big" href="#">
+                                    <img src="./static/img/icons/icons8-presentation-48.png" alt="Presentation icon">
+                                    <div>
+                                        <p>
+                                            Sigma
+                                            <span class="material-icons hidden-arrow">east</span>
+                                        </p>
+                                        <small>Custom reports</small>
+                                    </div>
+                                </a>
+                                <a class="menu-link menu-link--big" href="#">
+                                    <img src="./static/img/icons/icons8-attract-customers-48.png" alt="Customer attraction icon">
+                                    <div>
+                                        <p>
+                                            Atlas
+                                            <span class="material-icons hidden-arrow">east</span>
+                                        </p>
+                                        <small>Startup incorporation</small>
+                                    </div>
+                                </a>
+                                <a class="menu-link menu-link--big" href="#">
+                                    <img src="./static/img/icons/icons8-earth-planet-48.png" alt="Earth icon">
+                                    <div>
+                                        <p>
+                                            Climate
+                                            <span class="material-icons hidden-arrow">east</span>
+                                        </p>
+                                        <small>Carbon removal</small>
+                                    </div>
+                                </a>
+                                <a class="menu-link menu-link--big" href="#">
+                                    <img src="./static/img/icons/icons8-tax-48.png" alt="Tax collection icon">
+                                    <div>
+                                        <p>
+                                            Tax
+                                            <span class="material-icons hidden-arrow">east</span>
+                                        </p>
+                                        <small>Sales tax & VAT automation</small>
+                                    </div>
+                                </a>
+                                <a class="menu-link menu-link--big" href="#">
+                                    <img src="./static/img/icons/icons8-face-id-48.png" alt="FaceID icon">
+                                    <div>
+                                        <p>
+                                            Identity
+                                            <span class="material-icons hidden-arrow">east</span>
+                                        </p>
+                                        <small>Online identity verification</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="desktop-menu__section section-cases" data-section="cases">
+
+                    <div class="desktop-menu__section-content">
+
+                        <div class="desktop-menu__column">
+                            <a class="menu-link" href="#">
+                                <span class="material-icons">shopping_basket</span>
                                 <div>
                                     <p>
-                                        Payments
+                                        Ecommerce
                                         <span class="material-icons hidden-arrow">east</span>
                                     </p>
-                                    <small>Online payments</small>
+                                    <small>Unify online and in-person payments</small>
                                 </div>
                             </a>
-                            <a class="menu-link menu-link--big" href="#">
-                                <img src="./static/img/icons/icons8-card-security-48.png" alt="Card security icon">
+                            <a class="menu-link" href="#">
+                                <span class="material-icons">api</span>
                                 <div>
                                     <p>
-                                        Payment links
+                                        SaaS
                                         <span class="material-icons hidden-arrow">east</span>
                                     </p>
-                                    <small>No-code payments</small>
+                                    <small>Manage recurring billing and subscriptions</small>
                                 </div>
                             </a>
-                            <a class="menu-link menu-link--big" href="#">
-                                <img src="./static/img/icons/icons8-purchase-order-48.png" alt="Receipt icon">
+                            <a class="menu-link" href="#">
+                                <span class="material-icons">store</span>
                                 <div>
                                     <p>
-                                        Invoicing
+                                        Marketplaces
                                         <span class="material-icons hidden-arrow">east</span>
                                     </p>
-                                    <small>Online invoices</small>
+                                    <small>Pay out globally and facilitate multiparty payments</small>
                                 </div>
                             </a>
-                            <a class="menu-link menu-link--big" href="#">
-                                <img src="./static/img/icons/icons8-handshake-48.png" alt="Handshake icon">
+                            <a class="menu-link" href="#">
+                                <span class="material-icons">layers</span>
                                 <div>
                                     <p>
-                                        Billing
+                                        Platforms
                                         <span class="material-icons hidden-arrow">east</span>
                                     </p>
-                                    <small>Subscription management</small>
-                                </div>
-                            </a>
-                            <a class="menu-link menu-link--big" href="#">
-                                <img src="./static/img/icons/icons8-wallet-48.png" alt="Wallet icon">
-                                <div>
-                                    <p>
-                                        Connect
-                                        <span class="material-icons hidden-arrow">east</span>
-                                    </p>
-                                    <small>Payments for platforms</small>
-                                </div>
-                            </a>
-                            <a class="menu-link menu-link--big" href="#">
-                                <img src="./static/img/icons/icons8-cash-register-48.png" alt="Cash register icon">
-                                <div>
-                                    <p>
-                                        Terminal
-                                        <span class="material-icons hidden-arrow">east</span>
-                                    </p>
-                                    <small>In-person payments</small>
+                                    <small>Let customers accept payments within your platform</small>
                                 </div>
                             </a>
                         </div>
+
                     </div>
 
-                    <div class="desktop-menu__column">
-                        <h6 class="desktop-menu__column-title">
-                            Financial services
-                        </h6>
-                        <div class="desktop-menu__column-content">
-                            <a class="menu-link menu-link--big" href="#">
-                                <img src="./static/img/icons/icons8-debit-card-48.png" alt="Debit card icon">
-                                <div>
-                                    <p>
-                                        Corporate card
-                                        <span class="material-icons hidden-arrow">east</span>
-                                    </p>
-                                    <small>Spend management</small>
-                                </div>
-                            </a>
-                            <a class="menu-link menu-link--big" href="#">
-                                <img src="./static/img/icons/icons8-money-box-48.png" alt="Piggy bank icon">
-                                <div>
-                                    <p>
-                                        Capital
-                                        <span class="material-icons hidden-arrow">east</span>
-                                    </p>
-                                    <small>Business financing</small>
-                                </div>
-                            </a>
-                            <a class="menu-link menu-link--big" href="#">
-                                <img src="./static/img/icons/icons8-insert-credit-card-48.png" alt="Inserting credit card icon">
-                                <div>
-                                    <p>
-                                        Issuing
-                                        <span class="material-icons hidden-arrow">east</span>
-                                    </p>
-                                    <small>Card creation</small>
-                                </div>
-                            </a>
-                            <a class="menu-link menu-link--big" href="#">
-                                <img src="./static/img/icons/icons8-online-money-transfer-48.png" alt="Online transfer icon">
-                                <div>
-                                    <p>
-                                        Treasury
-                                        <span class="material-icons hidden-arrow">east</span>
-                                    </p>
-                                    <small>Banking-as-a-service</small>
-                                </div>
-                            </a>
+                </section>
+
+                <section class="desktop-menu__section section-devs" data-section="devs">
+
+                    <a class="menu-link top-link" href="#">
+                        <span class="material-icons">menu_book</span>
+                        <div>
+                            <p>
+                                Documentation
+                                <span class="material-icons hidden-arrow">east</span>
+                            </p>
+                            <small>Start integrating Stripe’s products and tools</small>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="desktop-menu__column">
-                        <h6 class="desktop-menu__column-title">
-                            Business operations
-                        </h6>
-                        <div class="desktop-menu__column-content">
-                            <a class="menu-link menu-link--big" href="#">
-                                <img src="./static/img/icons/icons8-radar-48.png" alt="Radar icon">
-                                <div>
-                                    <p>
-                                        Radar
-                                        <span class="material-icons hidden-arrow">east</span>
-                                    </p>
-                                    <small>Fraud & risk management</small>
-                                </div>
+                    <div class="desktop-menu__section-content">
+
+                        <div class="desktop-menu__column">
+
+                            <h6 class="desktop-menu__column-title desktop-menu__column-title--compact">
+                                Get started
+                            </h6>
+
+                            <a class="simple-link" href="#">
+                                Prebuilt checkout
                             </a>
-                            <a class="menu-link menu-link--big" href="#">
-                                <img src="./static/img/icons/icons8-presentation-48.png" alt="Presentation icon">
-                                <div>
-                                    <p>
-                                        Sigma
-                                        <span class="material-icons hidden-arrow">east</span>
-                                    </p>
-                                    <small>Custom reports</small>
-                                </div>
+                            <a class="simple-link" href="#">
+                                Libraries and SDKs
                             </a>
-                            <a class="menu-link menu-link--big" href="#">
-                                <img src="./static/img/icons/icons8-attract-customers-48.png" alt="Customer attraction icon">
-                                <div>
-                                    <p>
-                                        Atlas
-                                        <span class="material-icons hidden-arrow">east</span>
-                                    </p>
-                                    <small>Startup incorporation</small>
-                                </div>
+                            <a class="simple-link" href="#">
+                                Plugins
                             </a>
-                            <a class="menu-link menu-link--big" href="#">
-                                <img src="./static/img/icons/icons8-earth-planet-48.png" alt="Earth icon">
-                                <div>
-                                    <p>
-                                        Climate
-                                        <span class="material-icons hidden-arrow">east</span>
-                                    </p>
-                                    <small>Carbon removal</small>
-                                </div>
+                            <a class="simple-link" href="#">
+                                Code samples
                             </a>
-                            <a class="menu-link menu-link--big" href="#">
-                                <img src="./static/img/icons/icons8-tax-48.png" alt="Tax collection icon">
-                                <div>
-                                    <p>
-                                        Tax
-                                        <span class="material-icons hidden-arrow">east</span>
-                                    </p>
-                                    <small>Sales tax & VAT automation</small>
-                                </div>
-                            </a>
-                            <a class="menu-link menu-link--big" href="#">
-                                <img src="./static/img/icons/icons8-face-id-48.png" alt="FaceID icon">
-                                <div>
-                                    <p>
-                                        Identity
-                                        <span class="material-icons hidden-arrow">east</span>
-                                    </p>
-                                    <small>Online identity verification</small>
-                                </div>
-                            </a>
+
                         </div>
-                    </div>
 
-                </div>
+                        <div class="desktop-menu__column">
 
-            </div>
+                            <h6 class="desktop-menu__column-title desktop-menu__column-title--compact">
+                                Guides
+                            </h6>
 
-            <div class="desktop-menu__section section-cases" data-section="cases">
+                            <a class="simple-link" href="#">
+                                Accept online payments
+                            </a>
+                            <a class="simple-link" href="#">
+                                Manage subscriptions
+                            </a>
+                            <a class="simple-link" href="#">
+                                Send payments
+                            </a>
+                            <a class="simple-link" href="#">
+                                Set up in-person payments
+                            </a>
 
-                <div class="desktop-menu__section-content">
-
-                    <div class="desktop-menu__column">
-                        <a class="menu-link" href="#">
-                            <span class="material-icons">shopping_basket</span>
-                            <div>
-                                <p>
-                                    Ecommerce
-                                    <span class="material-icons hidden-arrow">east</span>
-                                </p>
-                                <small>Unify online and in-person payments</small>
-                            </div>
-                        </a>
-                        <a class="menu-link" href="#">
-                            <span class="material-icons">api</span>
-                            <div>
-                                <p>
-                                    SaaS
-                                    <span class="material-icons hidden-arrow">east</span>
-                                </p>
-                                <small>Manage recurring billing and subscriptions</small>
-                            </div>
-                        </a>
-                        <a class="menu-link" href="#">
-                            <span class="material-icons">store</span>
-                            <div>
-                                <p>
-                                    Marketplaces
-                                    <span class="material-icons hidden-arrow">east</span>
-                                </p>
-                                <small>Pay out globally and facilitate multiparty payments</small>
-                            </div>
-                        </a>
-                        <a class="menu-link" href="#">
-                            <span class="material-icons">layers</span>
-                            <div>
-                                <p>
-                                    Platforms
-                                    <span class="material-icons hidden-arrow">east</span>
-                                </p>
-                                <small>Let customers accept payments within your platform</small>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="desktop-menu__section section-devs" data-section="devs">
-
-                <a class="menu-link top-link" href="#">
-                    <span class="material-icons">menu_book</span>
-                    <div>
-                        <p>
-                            Documentation
-                            <span class="material-icons hidden-arrow">east</span>
-                        </p>
-                        <small>Start integrating Stripe’s products and tools</small>
-                    </div>
-                </a>
-
-                <div class="desktop-menu__section-content">
-
-                    <div class="desktop-menu__column">
-
-                        <h6 class="desktop-menu__column-title desktop-menu__column-title--compact">
-                            Get started
-                        </h6>
-
-                        <a class="simple-link" href="#">
-                            Prebuilt checkout
-                        </a>
-                        <a class="simple-link" href="#">
-                            Libraries and SDKs
-                        </a>
-                        <a class="simple-link" href="#">
-                            Plugins
-                        </a>
-                        <a class="simple-link" href="#">
-                            Code samples
-                        </a>
+                        </div>
 
                     </div>
 
-                    <div class="desktop-menu__column">
+                    <div class="desktop-menu__section-footer">
 
-                        <h6 class="desktop-menu__column-title desktop-menu__column-title--compact">
-                            Guides
-                        </h6>
+                        <div class="desktop-menu__column">
 
-                        <a class="simple-link" href="#">
-                            Accept online payments
-                        </a>
-                        <a class="simple-link" href="#">
-                            Manage subscriptions
-                        </a>
-                        <a class="simple-link" href="#">
-                            Send payments
-                        </a>
-                        <a class="simple-link" href="#">
-                            Set up in-person payments
-                        </a>
+                            <a class="menu-link" href="#">
+                                <span class="material-icons">sticky_note_2</span>
+                                <div>
+                                    <p>
+                                        Full API reference
+                                    </p>
+                                </div>
+                            </a>
 
-                    </div>
+                            <a class="menu-link" href="#">
+                                <span class="material-icons">question_answer</span>
+                                <div>
+                                    <p>
+                                        Support
+                                    </p>
+                                </div>
+                            </a>
 
-                </div>
+                        </div>
 
-                <div class="desktop-menu__section-footer">
+                        <div class="desktop-menu__column">
 
-                    <div class="desktop-menu__column">
+                            <a class="menu-link" href="#">
+                                <span class="material-icons">monitor_heart</span>
+                                <div>
+                                    <p>
+                                        API status
+                                    </p>
+                                </div>
+                            </a>
 
-                        <a class="menu-link" href="#">
-                            <span class="material-icons">sticky_note_2</span>
-                            <div>
-                                <p>
-                                    Full API reference
-                                </p>
-                            </div>
-                        </a>
+                            <a class="menu-link" href="#">
+                                <span class="material-icons">code</span>
+                                <div>
+                                    <p>
+                                        API changelog
+                                    </p>
+                                </div>
+                            </a>
 
-                        <a class="menu-link" href="#">
-                            <span class="material-icons">question_answer</span>
-                            <div>
-                                <p>
-                                    Support
-                                </p>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <div class="desktop-menu__column">
-
-                        <a class="menu-link" href="#">
-                            <span class="material-icons">monitor_heart</span>
-                            <div>
-                                <p>
-                                    API status
-                                </p>
-                            </div>
-                        </a>
-
-                        <a class="menu-link" href="#">
-                            <span class="material-icons">code</span>
-                            <div>
-                                <p>
-                                    API changelog
-                                </p>
-                            </div>
-                        </a>
+                        </div>
 
                     </div>
 
-                </div>
+                </section>
 
-            </div>
+                <section class="desktop-menu__section section-company" data-section="company">
 
-            <div class="desktop-menu__section section-company" data-section="company">
+                    <div class="desktop-menu__section-content">
 
-                <div class="desktop-menu__section-content">
+                        <div class="desktop-menu__column">
 
-                    <div class="desktop-menu__column">
+                            <a class="menu-link menu-link--compact" href="#">
+                                <span class="material-icons">monetization_on</span>
+                                <div>
+                                    <p>About Stripe</p>
+                                </div>
+                            </a>
 
-                        <a class="menu-link menu-link--compact" href="#">
-                            <span class="material-icons">monetization_on</span>
-                            <div>
-                                <p>About Stripe</p>
-                            </div>
-                        </a>
+                            <a class="menu-link menu-link--compact" href="#">
+                                <span class="material-icons">business</span>
+                                <div>
+                                    <p>Customers</p>
+                                </div>
+                            </a>
 
-                        <a class="menu-link menu-link--compact" href="#">
-                            <span class="material-icons">business</span>
-                            <div>
-                                <p>Customers</p>
-                            </div>
-                        </a>
+                            <a class="menu-link menu-link--compact" href="#">
+                                <span class="material-icons">public</span>
+                                <div>
+                                    <p>Enterprise</p>
+                                </div>
+                            </a>
 
-                        <a class="menu-link menu-link--compact" href="#">
-                            <span class="material-icons">public</span>
-                            <div>
-                                <p>Enterprise</p>
-                            </div>
-                        </a>
+                            <a class="menu-link menu-link--compact" href="#">
+                                <span class="material-icons">work</span>
+                                <div>
+                                    <p>Jobs</p>
+                                </div>
+                            </a>
 
-                        <a class="menu-link menu-link--compact" href="#">
-                            <span class="material-icons">work</span>
-                            <div>
-                                <p>Jobs</p>
-                            </div>
-                        </a>
+                        </div>
 
-                    </div>
+                        <div class="desktop-menu__column">
 
-                    <div class="desktop-menu__column">
+                            <a class="menu-link menu-link--compact" href="#">
+                                <span class="material-icons">article</span>
+                                <div>
+                                    <p>Newsroom</p>
+                                </div>
+                            </a>
 
-                        <a class="menu-link menu-link--compact" href="#">
-                            <span class="material-icons">article</span>
-                            <div>
-                                <p>Newsroom</p>
-                            </div>
-                        </a>
+                            <a class="menu-link menu-link--compact" href="#">
+                                <span class="material-icons">people</span>
+                                <div>
+                                    <p>Partners</p>
+                                </div>
+                            </a>
 
-                        <a class="menu-link menu-link--compact" href="#">
-                            <span class="material-icons">people</span>
-                            <div>
-                                <p>Partners</p>
-                            </div>
-                        </a>
+                            <a class="menu-link menu-link--compact" href="#">
+                                <span class="material-icons">event</span>
+                                <div>
+                                    <p>Sessions</p>
+                                </div>
+                            </a>
 
-                        <a class="menu-link menu-link--compact" href="#">
-                            <span class="material-icons">event</span>
-                            <div>
-                                <p>Sessions</p>
-                            </div>
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="desktop-menu__section-footer">
-
-                    <div class="desktop-menu__column">
-
-                        <a class="menu-link menu-link--compact" href="#">
-                            <span class="material-icons">rate_review</span>
-                            <div>
-                                <p>From the blog</p>
-                            </div>
-                        </a>
-
-                        <a class="simple-link" href="#">
-                            Stripe's payments API: the first ten years
-                        </a>
-
-                        <a class="simple-link" href="#">
-                            European payment methods available worldwide
-                        </a>
-
-                        <a class="simple-link" href="#">
-                            We built checkout so you don't have to
-                        </a>
+                        </div>
 
                     </div>
 
-                </div>
+                    <div class="desktop-menu__section-footer">
+
+                        <div class="desktop-menu__column">
+
+                            <a class="menu-link menu-link--compact" href="#">
+                                <span class="material-icons">rate_review</span>
+                                <div>
+                                    <p>From the blog</p>
+                                </div>
+                            </a>
+
+                            <a class="simple-link" href="#">
+                                Stripe's payments API: the first ten years
+                            </a>
+
+                            <a class="simple-link" href="#">
+                                European payment methods available worldwide
+                            </a>
+
+                            <a class="simple-link" href="#">
+                                We built checkout so you don't have to
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </section>
 
             </div>
 

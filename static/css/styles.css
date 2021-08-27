@@ -41,13 +41,21 @@ nav ul {
     box-shadow: 0 45px 25px -40px hsla(0, 0%, 0%, 0.25), 0 15px 25px 10px hsla(0, 0%, 0%, 0.1);
     left: 50%;
     opacity: 0;
-    overflow: hidden;
     position: absolute;
     top: 100%;
     transform: translateX(-50%);
     transform-origin: 50% -50px;
     transition: 0.25s ease transform, 0.25s ease opacity;
     will-change: opacity, transform;
+}
+
+.desktop-menu__wrapper {
+    bottom: 0;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
 }
 
 .desktop-menu--anim-resize {
@@ -266,6 +274,25 @@ nav ul {
 
 .menu-link.top-link {
     margin-bottom: 2rem;
+}
+
+.menu-pointer {
+    background-color: white;
+    border-radius: 4px;
+    bottom: -16px;
+    height: 16px;
+    opacity: 0;
+    position: absolute;
+    width: 16px;
+    transform: translateX(0) rotate(45deg);
+}
+
+.menu-pointer--anim-transform {
+    transition: 0.25s ease transform;
+}
+
+.menu-pointer--visible {
+    opacity: 1;
 }
 
 .simple-link {
