@@ -37,6 +37,7 @@ nav ul {
 
 .desktop-menu {
     border: 1px dotted blue;
+    border-radius: 12px;
     left: 50%;
     padding: 2.5rem 2rem;
     position: absolute;
@@ -45,7 +46,7 @@ nav ul {
 }
 
 .desktop-menu__column {
-    margin: 0 2rem;
+    margin: 0 3rem;
 }
 
 .desktop-menu__column:first-of-type { margin-left: 0; }
