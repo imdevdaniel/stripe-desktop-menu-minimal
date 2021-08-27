@@ -1,0 +1,126 @@
+:root {
+    /* Font sizes */
+    --text-body: 1rem;
+    --text-overline: 0.875rem;
+    --text-small: 0.75rem;
+
+    /* Font weights */
+    --font-light: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+
+    /* Colors */
+    --gray: hsl(0, 0%, 45%);
+    --gray-light: hsl(0, 0%, 65%);
+    --gray-dark: hsl(0, 0%, 25%);
+}
+
+a {
+    text-decoration: none;
+}
+
+body,
+html {
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.desktop-menu {
+    border: 1px dotted blue;
+    left: 50%;
+    padding: 2.5rem 2rem;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+}
+
+.desktop-menu__column {
+    margin: 0 2rem;
+}
+
+.desktop-menu__column:first-of-type { margin-left: 0; }
+.desktop-menu__column:last-of-type { margin-right: 0; }
+
+.desktop-menu__column-title {
+    color: var(--gray-light);
+    font-size: var(--text-overline);
+    font-weight: var(--font-medium);
+    margin: 0 0 2rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.desktop-menu__section {
+    display: flex;
+    align-items: flex-start;
+}
+
+.desktop-nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.desktop-nav__logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.desktop-nav__options button {
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    margin: 0 0.25rem;
+    padding: 0.25rem 0.75rem;
+}
+
+.header {
+    border: 1px dotted red;
+    margin: 1.5rem auto;
+    max-width: 1050px;
+    position: relative;
+}
+
+.menu-link {
+    align-items: center;
+    display: flex;
+    margin-bottom: 2rem;
+    white-space: nowrap;
+}
+
+.menu-link:last-of-type {
+    margin-bottom: 0;
+}
+
+.menu-link--big {
+    align-items: flex-start;
+}
+
+.menu-link img {
+    max-height: 44px;
+    max-width: 44px;
+    margin-right: 1rem;
+}
+
+.menu-link p {
+    color: var(--gray-dark);
+    font-size: var(--text-overline);
+    font-weight: var(--font-medium);
+    line-height: 1;
+    margin: 0.25rem 0;
+}
+
+.menu-link small {
+    color: var(--gray);
+    font-size: var(--text-small);
+}
